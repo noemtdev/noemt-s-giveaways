@@ -160,21 +160,13 @@ async def on_application_command_error(ctx, error):
         await ctx.respond(embed=em, ephemeral=True)
 
 
-@bot.command(
-    name="rickroll",
-    description="Never Gonna Give you up!",
-    guild_ids=[934811485228658749]
-)
-async def test(ctx):
-    await ctx.respond(
-        "https://images-ext-1.discordapp.net/external/AoV9l5YhsWBj92gcKGkzyJAAXoYpGiN6BdtfzM-00SU/https/i.imgur.com/NQinKJB.mp4",
-        ephemeral=True)
-
-
 for dir_name in ["commands"]:
     for file in os.listdir(dir_name):
         if file.endswith(".py"):
             bot.load_extension(f"{dir_name}.{file}".replace('.py', ''))
 
 
-bot.run("OTMyNjg2MjY3MzY2MzgzNjE2.YeWlxg.SIKbXGnkr28FBTQSz-DgBBSu8Hs")
+bot.run(os.getenv("TOKEN"))
+""" create a .env file in the following format:
+TOKEN=<your bot token>
+""" 
