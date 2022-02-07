@@ -169,4 +169,7 @@ for dir_name in ["commands"]:
 bot.run(os.getenv("TOKEN"))
 """ create a .env file in the following format:
 TOKEN=<your bot token>
+
+OR:
+bot.run("<your bot token>")
 """ 
