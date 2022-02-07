@@ -125,7 +125,7 @@ async def help(ctx):
                  inline=False)
     em.add_field(
         name="Other",
-        value=f"To invite the bot, click [here!](https://discord.com/api/oauth2/authorize?client_id=932686267366383616&permissions=543313885249&scope=bot%20applications.commands)\nYou need `Manage Server` permissions to manage Giveaways!",
+        value=f"To invite the bot, click [here!](https://discord.com/api/oauth2/authorize?client_id={self.bot.id}&permissions=543313885249&scope=bot%20applications.commands)\nYou need `Manage Server` permissions to manage Giveaways!",
         inline=False)
     await ctx.respond(embed=em)
 
