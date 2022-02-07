@@ -130,19 +130,6 @@ async def help(ctx):
     await ctx.respond(embed=em)
 
 
-@bot.command(
-    name="vote",
-    description="Vote for the bot! <3"
-)
-async def vote(ctx):
-    em = discord.Embed(color=0x0398d8, title="Vote!",
-                       description="To vote for this bot, click [here!](https://discordbotlist.com/bots/noemts-giveaways/upvote)")
-    em.set_footer(
-        text=f"Voting is appreciated, thank you! ",
-        icon_url="https://cdn.discordapp.com/avatars/352793093105254402/2f8d558788a138479a797c04c7a90640.webp?size=1024")
-    await ctx.respond(embed=em)
-
-
 @bot.event
 async def on_ready():
     await bot.change_presence(
